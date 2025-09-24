@@ -41,10 +41,10 @@ export default function Header() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <button className="text-white border border-dashed border-white font-bold px-6 py-2 rounded-full hover:bg-white hover:text-primary-dark transition-colors text-sm">
+            <button className="text-white border border-dashed border-white font-bold px-6 py-2 rounded-lg hover:bg-white hover:text-primary-dark transition-colors text-sm">
               ログイン
             </button>
-            <button className="bg-primary-green text-white font-bold px-12 py-2 rounded-full hover:bg-primary-green/90 transition-colors text-sm">
+            <button className="bg-primary-green text-white font-bold px-12 py-2 rounded-lg hover:bg-primary-green/90 transition-colors text-sm">
               無料で始める
             </button>
           </div>
