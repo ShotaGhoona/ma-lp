@@ -1,7 +1,79 @@
+import Image from 'next/image';
+
 export default function ProblemSection() {
   return (
-    <section>
-      <p>問題提起</p>
+    <section className="py-32 bg-primary-beige">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="text-center mb-24">
+          <p className="text-gray-600 text-sm mb-4">集客力UPが課題の社長様・ご担当者様へ</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark mb-8 leading-tight">
+            SEO対策でホームページへの流入を<br />増やしたいけれど・・・
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          <div className="text-center">
+            <div className="mb-8 h-40 flex items-center justify-center">
+              <Image
+                src="/problem-1.svg"
+                alt="SEOに強い記事の書き方がわからない"
+                width={200}
+                height={150}
+                className="max-h-full w-auto"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-primary-dark mb-4">
+              SEOに強い記事の書き方がわからない
+            </h3>
+            <p className="text-gray-700 text-sm mb-4">検索しても上位に表示されない</p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              記事を書いてみたものの、上位表示されない。どうやったら上位表示できるかもあまりわからない。
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-8 h-40 flex items-center justify-center">
+              <Image
+                src="/problem-2.svg"
+                alt="分析・改善ができない"
+                width={200}
+                height={150}
+                className="max-h-full w-auto"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-primary-dark mb-4">
+              分析・改善ができない
+            </h3>
+            <p className="text-gray-700 text-sm mb-4">効果測定の方法がわからない</p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              どこが原因で何を改善すればアクセスが増えるのかわからない。データはあっても活用方法が不明。
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-8 h-40 flex items-center justify-center">
+              <Image
+                src="/problem-3.svg"
+                alt="記事を書く時間も人手も足りない"
+                width={200}
+                height={150}
+                className="max-h-full w-auto"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-primary-dark mb-4">
+              記事を書く時間も人手も足りない
+            </h3>
+            <p className="text-gray-700 text-sm mb-4">リソース不足で継続が困難</p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              担当者不在で現場仕事も忙しく、必要とわかっていても書く時間もない。
+            </p>
+          </div>
+
+        </div>
+
+      </div>
     </section>
   );
 }
