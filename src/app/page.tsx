@@ -24,7 +24,7 @@ export default function Home() {
         {/* <PricingSection /> */}
         {/* <FlowSection /> */}
         <FaqSection />
-        <CompanySection />
+        {/* <CompanySection /> */}
       </main>
     </div>
   );

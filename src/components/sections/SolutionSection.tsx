@@ -1,10 +1,50 @@
 import Image from 'next/image';
 import GridBackground from '@/components/common/GridBackground';
+import CloudShape from '@/components/common/CloudShape';
+import CloudShapeTwo from '@/components/common/CloudShapeTwo';
+import CloudShapeThree from '@/components/common/CloudShapeThree';
 
 export default function SolutionSection() {
   return (
-    <section className="py-32 bg-primary-beige relative">
+    <section className="py-32 bg-primary-beige relative overflow-hidden">
       <GridBackground />
+      
+      {/* Cloud background elements */}
+      <CloudShape 
+        variant="orange" 
+        className="top-20 left-16 opacity-25" 
+      />
+      <CloudShapeTwo 
+        variant="beige"
+        className="top-1/2 right-0 opacity-40" 
+      />
+      <CloudShapeThree 
+        variant="dark"
+        className="bottom-10 left-1/3 opacity-35" 
+      />
+      <CloudShape 
+        variant="light" 
+        className="bottom-32 right-20 opacity-30" 
+      />
+      
+      {/* Additional clouds for richer background */}
+      <CloudShapeTwo 
+        variant="green"
+        className="top-5 right-5 opacity-25" 
+      />
+      <CloudShapeThree 
+        variant="light"
+        className="bottom-1/2 left-10 opacity-40" 
+      />
+      <CloudShape 
+        variant="beige" 
+        className="top-3/4 right-1/3 opacity-35" 
+      />
+      <CloudShapeTwo 
+        variant="orange"
+        className="bottom-5 left-1/2 opacity-20" 
+      />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-24">

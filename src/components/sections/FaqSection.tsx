@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import GridBackground from '@/components/common/GridBackground';
+import CloudShape from '@/components/common/CloudShape';
+import CloudShapeTwo from '@/components/common/CloudShapeTwo';
+import CloudShapeThree from '@/components/common/CloudShapeThree';
 
 const faqs = [
   {
@@ -38,8 +41,41 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-32 relative">
+    <section className="py-32 relative overflow-hidden bg-primary-beige">
       <GridBackground />
+      
+      {/* Cloud background elements */}
+      <CloudShape 
+        variant="light" 
+        className="top-0 right-0 opacity-25" 
+      />
+      <CloudShapeTwo 
+        variant="beige"
+        className="top-1/3 left-0 opacity-40" 
+      />
+      <CloudShapeThree 
+        variant="orange"
+        className="bottom-20 right-1/4 opacity-35" 
+      />
+      <CloudShape 
+        variant="beige" 
+        className="bottom-0 left-1/3 opacity-20" 
+      />
+      
+      {/* Additional clouds for richer background */}
+      <CloudShapeTwo 
+        variant="green"
+        className="top-1/4 right-1/3 opacity-25" 
+      />
+      <CloudShapeThree 
+        variant="dark"
+        className="bottom-1/2 left-10 opacity-40" 
+      />
+      <CloudShape 
+        variant="orange" 
+        className="top-3/4 right-5 opacity-35" 
+      />
+      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">

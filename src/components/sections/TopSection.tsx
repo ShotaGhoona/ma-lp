@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import GridBackground from '@/components/common/GridBackground';
+import CloudShape from '@/components/common/CloudShape';
+import CloudShapeTwo from '@/components/common/CloudShapeTwo';
+import CloudShapeThree from '@/components/common/CloudShapeThree';
 
 export default function TopSection() {
   return (
@@ -10,6 +13,43 @@ export default function TopSection() {
       }}
     >
       <GridBackground />
+      
+      {/* Cloud background elements */}
+      <CloudShape 
+        variant="light" 
+        className="top-0 right-10 opacity-30" 
+      />
+      <CloudShapeTwo 
+        variant="orange"
+        className="top-1/4 left-20 opacity-40" 
+      />
+      <CloudShapeThree 
+        variant="beige"
+        className="bottom-10 right-1/3 opacity-50" 
+      />
+      <CloudShape 
+        variant="beige" 
+        className="bottom-0 left-10 opacity-25" 
+      />
+      
+      {/* Additional clouds for richer background */}
+      <CloudShapeTwo 
+        variant="green"
+        className="top-1/3 right-5 opacity-35" 
+      />
+      <CloudShapeThree 
+        variant="dark"
+        className="bottom-1/4 left-1/3 opacity-40" 
+      />
+      <CloudShape 
+        variant="orange" 
+        className="top-1/2 left-5 opacity-20" 
+      />
+      <CloudShapeTwo 
+        variant="beige"
+        className="bottom-1/3 right-1/4 opacity-45" 
+      />
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           

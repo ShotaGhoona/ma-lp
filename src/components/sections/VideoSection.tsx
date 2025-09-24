@@ -1,9 +1,49 @@
 import GridBackground from '@/components/common/GridBackground';
+import CloudShape from '@/components/common/CloudShape';
+import CloudShapeTwo from '@/components/common/CloudShapeTwo';
+import CloudShapeThree from '@/components/common/CloudShapeThree';
 
 export default function VideoSection() {
   return (
-    <section className="py-20 bg-primary-beige relative">
+    <section className="py-20 bg-primary-beige relative overflow-hidden">
       <GridBackground />
+      
+      {/* 雲のような背景デザイン */}
+      <CloudShape 
+        variant="light" 
+        className="top-10 right-20 opacity-70" 
+      />
+      <CloudShapeTwo 
+        variant="orange"
+        className="top-1/3 left-16 opacity-60" 
+      />
+      <CloudShapeThree 
+        variant="beige"
+        className="bottom-20 right-32 opacity-50" 
+      />
+      <CloudShape 
+        variant="beige" 
+        className="bottom-10 left-10 opacity-40" 
+      />
+      <CloudShapeTwo 
+        variant="green"
+        className="top-20 left-1/2 opacity-30" 
+      />
+      
+      {/* Additional clouds for richer background */}
+      <CloudShapeThree 
+        variant="dark"
+        className="top-1/2 right-10 opacity-25" 
+      />
+      <CloudShape 
+        variant="light" 
+        className="bottom-1/3 left-20 opacity-35" 
+      />
+      <CloudShapeTwo 
+        variant="beige"
+        className="top-3/4 right-1/4 opacity-20" 
+      />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

@@ -1,10 +1,50 @@
 import Image from 'next/image';
 import GridBackground from '@/components/common/GridBackground';
+import CloudShape from '@/components/common/CloudShape';
+import CloudShapeTwo from '@/components/common/CloudShapeTwo';
+import CloudShapeThree from '@/components/common/CloudShapeThree';
 
 export default function WhySeoSection() {
   return (
-    <section className="py-24 bg-primary-beige relative">
+    <section className="py-24 bg-primary-beige relative overflow-hidden">
       <GridBackground />
+      
+      {/* Cloud background elements */}
+      <CloudShape 
+        variant="beige" 
+        className="top-10 left-0 opacity-25" 
+      />
+      <CloudShapeTwo 
+        variant="orange"
+        className="top-1/4 right-10 opacity-35" 
+      />
+      <CloudShapeThree 
+        variant="dark"
+        className="top-2/3 left-1/4 opacity-20" 
+      />
+      <CloudShape 
+        variant="light" 
+        className="bottom-40 right-0 opacity-45" 
+      />
+      
+      {/* Additional clouds for richer background */}
+      <CloudShapeTwo 
+        variant="green"
+        className="top-1/2 left-10 opacity-30" 
+      />
+      <CloudShapeThree 
+        variant="light"
+        className="bottom-20 left-1/3 opacity-35" 
+      />
+      <CloudShape 
+        variant="orange" 
+        className="top-5 right-1/3 opacity-25" 
+      />
+      <CloudShapeTwo 
+        variant="beige"
+        className="bottom-1/2 right-20 opacity-40" 
+      />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -149,7 +189,7 @@ export default function WhySeoSection() {
       </div>
 
       {/* AIO進化セクション - max-widthを突破 */}
-      <div className="relative py-32 overflow-hidden bg-primary-beige">
+      <div className="relative py-32 overflow-hidden">
         
         {/* 背景画像 - 画面左半分全体に拡張 */}
         <div className="absolute left-0 top-0 bottom-0 w-1/2 opacity-30">
