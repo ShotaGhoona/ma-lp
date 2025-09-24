@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import GridBackground from '@/components/common/GridBackground';
 
 export default function WhySeoSection() {
   return (
-    <section className="py-24 bg-primary-beige">
+    <section className="py-24 bg-primary-beige relative">
+      <GridBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -144,46 +146,45 @@ export default function WhySeoSection() {
           </div>
         </div>
 
-        {/* AIO進化セクション */}
-        <div className="bg-primary-beige p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Image
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="AI Technology"
-                width={600}
-                height={400}
-                className="shadow-lg"
-              />
-            </div>
-            <div>
-              <h3 className="text-4xl font-bold text-primary-dark mb-6">
-                SEO対策はAIO対策へと進化する
-              </h3>
-              <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  これまでのSEO対策は、Google検索での上位表示を目指すものでした。もちろん今後も重要な施策ですが、生成AIの登場により、最近の視点が「AIO（AI Optimization）」へと広がっていきます。
-                </p>
-                <p>
-                  AIOとは、ChatGPTやGeminiといった生成AIの回答文において、自社のコンテンツが優先的に表示・引用されるようにするための新しいアプローチです。
-                </p>
-                <p>
-                  今や多くのユーザーは、検索エンジンだけでなく、AIチャットに直接質問して情報を得るようになっています。この流れに乗れなければ、貴重な接点を逃すことになります。
-                </p>
-                <p>
-                  とはいえ、AIOはまったく別物ではなく、SEOの延長にあります。AIは複数の情報源を横断し、最適な情報を要約・生成して提示します。Google検索もその一つであり、そこで評価されるコンテンツは、AIにとっても信頼できる情報源になりやすいのです。
-                </p>
-                <p className="font-semibold text-primary-orange">
-                  重要なのは、キーワードを詰め込むことではなく、AIが理解しやすい構造、信頼性・専門性のある中身を備えること。AIの進化とともに、小手先のテクニックは通用しなくなり、「ユーザーにとって本当に価値あるコンテンツ」が求められています。
-                </p>
-                <p className="font-semibold text-primary-dark">
-                  つまり、SEOで大切にしてきた高品質なコンテンツ作りこそが、AI対策にも直結します。マーケティング全体の戦略がAIに広がる今、本質的な価値のある情報発信を発信し続けることが、あらゆるチャネルでの成果につながるのです。
+      </div>
+
+      {/* AIO進化セクション - max-widthを突破 */}
+      <div className="relative py-32 overflow-hidden bg-primary-beige">
+        
+        {/* 背景画像 - 画面左半分全体に拡張 */}
+        <div className="absolute left-0 top-0 bottom-0 w-1/2 opacity-30">
+          <Image
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="AI Technology"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 max-w-4xl ml-auto mr-8 text-left">
+            
+            <h3 className="text-5xl lg:text-6xl font-bold text-primary-dark mb-16">
+              SEO対策は<br />AIO対策へと進化する
+            </h3>
+            
+            <div className="space-y-8 text-xl text-gray-700 leading-relaxed">
+              <p>
+                これまでのSEO対策は、Google検索での上位表示を目指すものでした。もちろん今後も重要な施策ですが、生成AIの登場により、最近の視点が「AIO（AI Optimization）」へと広がっていきます。
+              </p>
+              
+              <div className="relative">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary-orange"></div>
+                <p className="pl-8 font-semibold text-primary-dark">
+                  重要なのは、キーワードを詰め込むことではなく、AIが理解しやすい構造、信頼性・専門性のある中身を備えること。本質的な価値のある情報発信を発信し続けることが、あらゆるチャネルでの成果につながるのです。
                 </p>
               </div>
+              
             </div>
+            
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,15 +1,16 @@
 import Image from 'next/image';
+import GridBackground from '@/components/common/GridBackground';
 
 export default function TopSection() {
   return (
     <section 
-      className="bg-cover bg-center bg-no-repeat relative py-20"
+      className="bg-cover min-h-screen bg-center bg-no-repeat relative py-20"
       style={{
         backgroundImage: `url('/パターン1 (4).png')`
       }}
     >
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      <GridBackground />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
@@ -51,8 +52,8 @@ export default function TopSection() {
               <Image
                 src="/imgi_9_mba15-skyblue-select-202503.png"
                 alt="MacBook showing SEO Tiger interface"
-                width={780}
-                height={520}
+                width={900}
+                height={640}
                 className="w-full h-auto"
                 priority
               />
@@ -60,6 +61,23 @@ export default function TopSection() {
           </div>
           
         </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+          <div className="flex flex-col items-center space-y-2">
+            <span className="text-white text-sm opacity-80">SCROLL</span>
+            <div className="w-0.5 h-8 bg-white/30 animate-pulse"></div>
+            <svg 
+              className="w-6 h-6 text-white animate-bounce" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+        
       </div>
     </section>
   );

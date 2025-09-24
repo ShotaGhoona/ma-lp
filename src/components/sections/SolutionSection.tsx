@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import GridBackground from '@/components/common/GridBackground';
 
 export default function SolutionSection() {
   return (
-    <section className="py-32">
+    <section className="py-32 bg-primary-beige relative">
+      <GridBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-24">

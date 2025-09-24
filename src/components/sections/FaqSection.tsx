@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import GridBackground from '@/components/common/GridBackground';
 
 const faqs = [
   {
@@ -37,7 +38,8 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-32">
+    <section className="py-32 relative">
+      <GridBackground />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
