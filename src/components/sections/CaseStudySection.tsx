@@ -28,15 +28,15 @@ export default function CaseStudySection() {
       
       {/* Additional clouds for richer background */}
       <CloudShapeTwo 
-        variant="light"
+        variant="beige"
         className="top-2/3 left-0 opacity-20" 
       />
       <CloudShapeThree 
-        variant="green"
+        variant="orange"
         className="top-1/2 left-1/2 opacity-35" 
       />
       <CloudShape 
-        variant="dark" 
+        variant="light" 
         className="top-5 right-1/3 opacity-40" 
       />
       <CloudShapeTwo 
