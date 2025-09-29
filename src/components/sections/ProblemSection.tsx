@@ -3,10 +3,6 @@ import GridBackground from '@/components/common/GridBackground';
 import CloudShape from '@/components/common/CloudShape';
 import CloudShapeTwo from '@/components/common/CloudShapeTwo';
 import CloudShapeThree from '@/components/common/CloudShapeThree';
-import FadeInUp from '@/components/common/FadeInUp';
-import StaggerChildren, { StaggerItem } from '@/components/animations/StaggerChildren';
-import RevealText from '@/components/animations/RevealText';
-import ScaleIn from '@/components/animations/ScaleIn';
 
 export default function ProblemSection() {
   return (
@@ -52,20 +48,16 @@ export default function ProblemSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-24">
-          <FadeInUp delay={0.2}>
-            <p className="text-gray-600 text-sm mb-4">集客力UPが課題の社長様・ご担当者様へ</p>
-          </FadeInUp>
-          <RevealText 
-            text="SEO対策でホームページへの流入を増やしたいけれど・・・" 
-            className="text-4xl lg:text-5xl font-bold text-primary-dark mb-8 leading-tight"
-            delay={0.4}
-          />
+          <p className="text-gray-600 text-sm mb-4">集客力UPが課題の社長様・ご担当者様へ</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark mb-8 leading-tight">
+            SEO対策でホームページへの流入を増やしたいけれど・・・
+          </h2>
         </div>
 
-        <StaggerChildren delay={0.8} staggerDelay={0.2} className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           
-          <StaggerItem direction="up" className="text-center">
-            <ScaleIn delay={0.1} className="mb-8 h-40 flex items-center justify-center">
+          <div className="text-center">
+            <div className="mb-8 h-40 flex items-center justify-center">
               <Image
                 src="/problem-1.svg"
                 alt="SEOに強い記事の書き方がわからない"
@@ -73,7 +65,7 @@ export default function ProblemSection() {
                 height={150}
                 className="max-h-full w-auto"
               />
-            </ScaleIn>
+            </div>
             <h3 className="text-xl font-bold text-primary-dark mb-4">
               SEOに強い記事の書き方がわからない
             </h3>
@@ -81,10 +73,10 @@ export default function ProblemSection() {
             <p className="text-gray-600 text-sm leading-relaxed">
               記事を書いてみたものの、上位表示されない。どうやったら上位表示できるかもあまりわからない。
             </p>
-          </StaggerItem>
+          </div>
 
-          <StaggerItem direction="up" className="text-center">
-            <ScaleIn delay={0.2} className="mb-8 h-40 flex items-center justify-center">
+          <div className="text-center">
+            <div className="mb-8 h-40 flex items-center justify-center">
               <Image
                 src="/problem-2.svg"
                 alt="分析・改善ができない"
@@ -92,7 +84,7 @@ export default function ProblemSection() {
                 height={150}
                 className="max-h-full w-auto"
               />
-            </ScaleIn>
+            </div>
             <h3 className="text-xl font-bold text-primary-dark mb-4">
               分析・改善ができない
             </h3>
@@ -100,10 +92,10 @@ export default function ProblemSection() {
             <p className="text-gray-600 text-sm leading-relaxed">
               どこが原因で何を改善すればアクセスが増えるのかわからない。データはあっても活用方法が不明。
             </p>
-          </StaggerItem>
+          </div>
 
-          <StaggerItem direction="up" className="text-center">
-            <ScaleIn delay={0.3} className="mb-8 h-40 flex items-center justify-center">
+          <div className="text-center">
+            <div className="mb-8 h-40 flex items-center justify-center">
               <Image
                 src="/problem-3.svg"
                 alt="記事を書く時間も人手も足りない"
@@ -111,7 +103,7 @@ export default function ProblemSection() {
                 height={150}
                 className="max-h-full w-auto"
               />
-            </ScaleIn>
+            </div>
             <h3 className="text-xl font-bold text-primary-dark mb-4">
               記事を書く時間も人手も足りない
             </h3>
@@ -119,9 +111,9 @@ export default function ProblemSection() {
             <p className="text-gray-600 text-sm leading-relaxed">
               担当者不在で現場仕事も忙しく、必要とわかっていても書く時間もない。
             </p>
-          </StaggerItem>
+          </div>
 
-        </StaggerChildren>
+        </div>
 
       </div>
     </section>

@@ -4,11 +4,10 @@ import VideoSection from "@/components/sections/VideoSection";
 import WhySeoSection from "@/components/sections/WhySeoSection";
 import ProblemSection from "@/components/sections/ProblemSection";
 import SolutionSection from "@/components/sections/SolutionSection";
-// import CaseStudySection from "@/components/sections/CaseStudySection";
-// import PricingSection from "@/components/sections/PricingSection";
-// import FlowSection from "@/components/sections/FlowSection";
+import FlowSection from "@/components/sections/FlowSection";
+import PricingSection from "@/components/sections/PricingSection";
+import CaseStudySection from "@/components/sections/CaseStudySection";
 import FaqSection from "@/components/sections/FaqSection";
-import CompanySection from "@/components/sections/CompanySection";
 
 export default function Home() {
   return (
@@ -20,11 +19,10 @@ export default function Home() {
         <WhySeoSection />
         <ProblemSection />
         <SolutionSection />
-        {/* <CaseStudySection /> */}
-        {/* <PricingSection /> */}
-        {/* <FlowSection /> */}
+        <CaseStudySection />
+        <PricingSection />
+        <FlowSection />
         <FaqSection />
-        {/* <CompanySection /> */}
       </main>
     </div>
   );

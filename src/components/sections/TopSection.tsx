@@ -3,11 +3,6 @@ import GridBackground from '@/components/common/GridBackground';
 import CloudShape from '@/components/common/CloudShape';
 import CloudShapeTwo from '@/components/common/CloudShapeTwo';
 import CloudShapeThree from '@/components/common/CloudShapeThree';
-import FadeInUp from '@/components/common/FadeInUp';
-import SlideInLeft from '@/components/animations/SlideInLeft';
-import SlideInRight from '@/components/animations/SlideInRight';
-import ScaleIn from '@/components/animations/ScaleIn';
-import FloatIn from '@/components/animations/FloatIn';
 
 export default function TopSection() {
   return (
@@ -59,18 +54,16 @@ export default function TopSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
-          <SlideInLeft className="space-y-8">
-            <ScaleIn delay={0.3}>
-              <Image
-                src="/seo-tiger.svg"
-                alt="SEO Tiger by jungle AI"
-                width={495}
-                height={107}
-                className="w-[30rem] h-auto"
-              />
-            </ScaleIn>
+          <div className="space-y-8">
+            <Image
+              src="/seo-tiger.svg"
+              alt="SEO Tiger by jungle AI"
+              width={495}
+              height={107}
+              className="w-[30rem] h-auto"
+            />
             
-            <FadeInUp delay={0.5}>
+            <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 高品質なSEO記事を<br />
                 わずか数分で自動生成
@@ -79,21 +72,21 @@ export default function TopSection() {
                 キーワードを入力するだけで、AIが検索上位表示を狙えるSEO最適化された記事を自動作成。<br />
                 チャットベースの編集機能で簡単カスタマイズ。
               </p>
-            </FadeInUp>
+            </div>
             
-            <FadeInUp delay={0.8} className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-primary-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-green/90 transition-colors">
                 無料で始める
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition-colors">
                 機能詳細を見る
               </button>
-            </FadeInUp>
-          </SlideInLeft>
+            </div>
+          </div>
           
           {/* Right Content - MacBook */}
-          <SlideInRight delay={0.4} className="flex justify-center lg:justify-end">
-            <FloatIn delay={0.7} className="relative max-w-2xl w-full">
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative max-w-2xl w-full">
               <Image
                 src="/imgi_9_mba15-skyblue-select-202503.png"
                 alt="MacBook showing SEO Tiger interface"
@@ -102,13 +95,13 @@ export default function TopSection() {
                 className="w-full h-auto"
                 priority
               />
-            </FloatIn>
-          </SlideInRight>
+            </div>
+          </div>
           
         </div>
         
         {/* Scroll Indicator */}
-        <FadeInUp delay={1.2} className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center">
           <div className="flex flex-col items-center space-y-2">
             <span className="text-white text-sm opacity-80">SCROLL</span>
             <div className="w-0.5 h-8 bg-white/30 animate-pulse"></div>
@@ -121,7 +114,7 @@ export default function TopSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
-        </FadeInUp>
+        </div>
         
       </div>
     </section>
